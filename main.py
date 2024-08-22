@@ -1,16 +1,9 @@
-# This is a sample Python script.
-
-# Press ⌃⌘R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from utils import load_data
+import pandas as pd
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    data_obj: dict[str, dict[int, pd.DataFrame]] = load_data(['UBIQ005'], [0, 1])
+    data_list: list[pd.DataFrame] = [df for df_obj in data_obj.values() for df in df_obj.values()]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print(data_list)
