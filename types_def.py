@@ -6,6 +6,7 @@ class Factor(enum.Enum):
     Vwap_Return1 = "Vwap_Return1"
     Vwap_Return2 = "Vwap_Return2"
     Vwap_Return3 = "Vwap_Return3"
+    Vwap_Return5 = "Vwap_Return5"
     Vwap_Return10 = "Vwap_Return10"
     Vwap_Return20 = "Vwap_Return20"
     BalancePrice1 = "BalancePrice1"

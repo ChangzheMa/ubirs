@@ -38,3 +38,8 @@ def cal_base_factor(data_list: list[pd.DataFrame], factor_list: list[str] = None
             if filna:
                 df.replace([np.inf, -np.inf], 0, inplace=True)
                 df.fillna(0, inplace=True)
+
+
+def test_factor(data_obj: dict[str, dict[int, pd.DataFrame]], factor_name: str, base_name: str = "Vwap_Return5"):
+    data_list: list[pd.DataFrame] = [df for df_obj in data_obj.values() for df in df_obj.values()]
+    # TODO
